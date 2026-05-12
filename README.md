@@ -22,4 +22,27 @@
 - Streamlit 대시보드
 
 ## 📊 데이터 출처
-- 올리브영 매장 위치: 직
+- 올리브영 매장 위치: 직접 수집
+- MFC 위치: 공개 뉴스/테크블로그 기반
+- 처리 시간 기준: 공개 브이로그 참고 (시뮬레이션)
+- 배송최적화 수치: 올리브영 테크블로그 (2026.03)
+
+## 🚀 실행 방법
+
+```bash
+pip install -r requirements.txt
+
+# 커버리지 분석
+python3 maps/map_coverage.py
+
+# 재연동 리스크 시뮬레이션
+python3 maps/map_reconnect_sim.py
+
+# 주문분배 대시보드
+streamlit run app.py
+```
+
+## ⚠️ 한계
+- MFC 위치 일부 미공개로 공개 자료 기반 추정
+- 실제 배송 권역 폴리곤 미반영
+- 운영 데이터 없이 공개 수치 기반 시뮬레이션
