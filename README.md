@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🫙 OliveYoung Delivery Optimization Simulator
 
 > 올리브영 멀티센터 주문분배 로직 시뮬레이터  
@@ -64,10 +65,41 @@
 > 올리브영 내부 데이터와 다를 수 있습니다.
 
 ---
+=======
+# 🫙 올리브영 오늘드림 SCM 분석 프로젝트
+
+올리브영 테크블로그 공개 수치와 직접 수집한 매장 데이터를 기반으로,
+오늘드림 MFC 커버리지와 재연동 리스크를 분석한 시뮬레이션 프로젝트입니다.
+
+## 📌 프로젝트 구성
+
+### 1. MFC 커버리지 분석 (`maps/map_coverage.py`)
+- 서울 377개 매장 직접 수집 + 카카오 로컬 API 좌표 변환
+- MFC 반경 5km 커버리지 시각화
+- KMeans 군집 분석으로 신규 MFC 최적 입지 3개 추천
+- 커버리지 87.8% → 91.5% 개선 효과 시뮬레이션
+
+### 2. 재연동 리스크 시뮬레이션 (`maps/map_reconnect_sim.py`)
+- 30분 초과 시 재연동 발생 구조 시뮬레이션
+- MFC 우선순위 매칭 시 처리시간 40% 단축 효과
+- 핵심 병목 매장 44개 식별 (MFC 미커버 + 피크타임 30분 초과)
+
+### 3. 멀티센터 주문분배 시뮬레이터 (`app.py`)
+- 올리브영 테크블로그 4단계 분배 로직 직접 구현
+- 쿠팡식 재고 선점 방식과 구조적 비교
+- Streamlit 대시보드
+
+## 📊 데이터 출처
+- 올리브영 매장 위치: 직접 수집
+- MFC 위치: 공개 뉴스/테크블로그 기반
+- 처리 시간 기준: 공개 브이로그 참고 (시뮬레이션)
+- 배송최적화 수치: 올리브영 테크블로그 (2026.03)
+>>>>>>> d5e983b7b1ee9b006e0bfef8422c7f8a089e6c39
 
 ## 🚀 실행 방법
 
 ```bash
+<<<<<<< HEAD
 # 1. 패키지 설치
 pip install -r requirements.txt
 
@@ -102,3 +134,21 @@ oliveyoung-scm/
 
 - [올리브영 테크블로그 - 배송최적화 시스템 구축기](https://oliveyoung.tech/2026-03-06/delivery-optimization/)
 - [올리브영 뉴스룸 - 경산센터 본격 가동](https://corp.oliveyoung.com/ko/news/38)
+=======
+pip install -r requirements.txt
+
+# 커버리지 분석
+python3 maps/map_coverage.py
+
+# 재연동 리스크 시뮬레이션
+python3 maps/map_reconnect_sim.py
+
+# 주문분배 대시보드
+streamlit run app.py
+```
+
+## ⚠️ 한계
+- MFC 위치 일부 미공개로 공개 자료 기반 추정
+- 실제 배송 권역 폴리곤 미반영
+- 운영 데이터 없이 공개 수치 기반 시뮬레이션
+>>>>>>> d5e983b7b1ee9b006e0bfef8422c7f8a089e6c39
