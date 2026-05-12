@@ -1,0 +1,3 @@
+﻿center_id,name,lat,lng,daily_capa,region,lead_time_inzone,lead_time_outzone
+YANGJI,양지센터,37.1953,127.2006,30000,수도권,4,18
+GYEONGSAN,경산센터,35.8197,128.7409,20000,비수도권,4,18
